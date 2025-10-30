@@ -1,0 +1,10 @@
+-- Buat database dan tabel
+CREATE DATABASE IF NOT EXISTS kampus CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE kampus;
+
+CREATE TABLE IF NOT EXISTS mahasiswa (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(255) NOT NULL,
+  nim VARCHAR(100) NOT NULL UNIQUE,
+  jurusan VARCHAR(255) NOT NULL
+) ENGINE=InnoDB;
